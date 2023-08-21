@@ -7,8 +7,12 @@ const hbs = require("hbs");
 app.set("view engine", "hbs");
 hbs.registerPartials(__dirname + "/views/partials");
 
-//servir contenido estatico
+//servir contenido(archivo) estatico - (haz pública esta carpeta)
 app.use(express.static("public"));
+
+// app.get("/", (req, res) => {
+//   app.send("Home Page");
+// });
 
 app.get("/", (req, res) => {
   res.render("home", {
@@ -30,6 +34,11 @@ app.get("/elements", (req, res) => {
     titulo: "aprendiendo",
   });
 });
+
+// app.get("*", (req, res) => {
+//   res.send("404 | Page not found");
+// });
+
 // app.get("*", (req, res) => {
 //   res.sendFile(__dirname + "/public/404.html");
 // });

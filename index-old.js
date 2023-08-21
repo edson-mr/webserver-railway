@@ -1,7 +1,7 @@
 const http = require("node:http");
 
 const server = http.createServer((req, res) => {
-  //   res.setHeader("Content-Disposition", "attachment; fiilename=lista.csv");
+  //   res.setHeader("Content-Disposition", "attachment; filename=lista.csv");
   //   res.writeHead(200, { "Content-Type": "application/csv" });
 
   res.writeHead(200, { "Content-Type": "text/plain" });
